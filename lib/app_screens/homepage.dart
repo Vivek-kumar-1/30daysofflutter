@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  int days = 30;
+  String name = 'Flutter';
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text('Welcome to 30 days Of Flutter'),
+          child: Text('Welcome to  $days Of $name'),
         ),
       ),
       drawer: Drawer(),
