@@ -1,5 +1,7 @@
-import 'package:feabox/app_screens/Login_Page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'package:feabox/app_screens/Login_Page.dart';
 
 import 'app_screens/homepage.dart';
 
@@ -7,8 +9,12 @@ void main() {
   runApp(MyApp());
 }
 
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  // ignore: non_constant_identifier_names
+ // var GoogleFonts;
+
+ // const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +23,13 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
           // primaryColor: Colors.red
-          primarySwatch: Colors.deepPurple),
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          ),
       darkTheme: ThemeData(
           // brightness: Brightness.dark,
           primarySwatch: Colors.green),
-      initialRoute: '/home',
+      initialRoute: '/',
       routes: {
         "/": (context) => LoginPage(),
         "/home": (context) => HomePage(),
