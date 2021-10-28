@@ -1,3 +1,4 @@
+import 'package:feabox/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,9 +13,9 @@ void main() {
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
   // ignore: non_constant_identifier_names
- // var GoogleFonts;
+  // var GoogleFonts;
 
- // const MyApp({Key? key}) : super(key: key);
+  // const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,18 +23,20 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),   as it defined in route/map
       themeMode: ThemeMode.light,
       theme: ThemeData(
-          // primaryColor: Colors.red
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily,
-          ),
+        // primaryColor: Colors.red
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
+      //debugShowCheckedModeBanner: false,
+      //debugShowCheckedModeBanner: true,
       darkTheme: ThemeData(
           // brightness: Brightness.dark,
           primarySwatch: Colors.green),
       initialRoute: '/',
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
