@@ -1,3 +1,4 @@
+import 'package:feabox/Widgets/Drawer.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
           child: Text('Welcome to  $days Of $name'),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }

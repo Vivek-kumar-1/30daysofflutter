@@ -17,19 +17,20 @@ class _LoginPageState extends State<LoginPage> {
 
   // ignore: non_constant_identifier_names
   moveToHome(BuildContext, context) async {
-    if (_formKey.currentState.validate()) ;
-    setState(() {
-      changeButton = true;
-    });
+    if (_formKey.currentState!.validate()) {
+      setState(() {
+        changeButton = true;
+      });
 
-    await Future.delayed(Duration(seconds: 1));
-    await Navigator.pushNamed(
-      context,
-      MyRoutes.homeRoute,
-    );
-    setState(() {
-      changeButton = false;
-    });
+      await Future.delayed(Duration(seconds: 1));
+      await Navigator.pushNamed(
+        context,
+        MyRoutes.homeRoute,
+      );
+      setState(() {
+        changeButton = false;
+      });
+    }
   }
 
   @override
