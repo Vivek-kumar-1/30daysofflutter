@@ -1,5 +1,7 @@
+import 'package:feabox/Widgets/themes.dart';
 import 'package:feabox/utils/routes.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:feabox/app_screens/Login_Page.dart';
@@ -22,16 +24,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(),   as it defined in route/map
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        // primaryColor: Colors.red
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+      theme: MyTheme.darkTheme(context),
       //debugShowCheckedModeBanner: false,
       //debugShowCheckedModeBanner: true,
-      darkTheme: ThemeData(
-          // brightness: Brightness.dark,
-          primarySwatch: Colors.green),
+      darkTheme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
